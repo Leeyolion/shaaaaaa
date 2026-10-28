@@ -3033,3 +3033,269 @@ body.menu-open .nav-footer {
     transition-duration: .01ms !important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   NGABI EVENTS — LUXURY FOOTER
+========================================= */
+
+.ngabi-footer {
+  --footer-onyx: #101114;
+  --footer-blue: #63d8ff;
+  --footer-white: #f0efe9;
+  --footer-muted: rgba(240, 239, 233, 0.56);
+
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  padding: 50px 5% 0;
+
+  color: var(--footer-white);
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(99, 216, 255, 0.07),
+      transparent 55%
+    ),
+    var(--footer-onyx);
+
+  font-family: "DM Sans", sans-serif;
+}
+
+/* THREE INFORMATION ROWS */
+
+.footer-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.footer-about-row {
+  padding-top: 0;
+  align-items: flex-end;
+}
+
+.footer-about {
+  max-width: 360px;
+}
+
+.footer-label {
+  margin: 0 0 15px;
+
+  color: var(--footer-blue);
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footer-about > p:last-child,
+.footer-location > p:last-child {
+  margin: 0;
+
+  color: var(--footer-muted);
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.footer-copyright {
+  margin: 0;
+
+  color: var(--footer-muted);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+}
+
+/* NAVIGATION ROW */
+
+.footer-navigation-row {
+  align-items: center;
+}
+
+.footer-navigation-row .footer-label {
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px 30px;
+}
+
+.footer-nav a,
+.footer-contact a {
+  color: var(--footer-white);
+  text-decoration: none;
+
+  font-size: 11px;
+  transition: color 0.25s ease;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+  color: var(--footer-blue);
+}
+
+/* LOCATION + CONTACT ROW */
+
+.footer-contact-row {
+  align-items: flex-start;
+  border-bottom: none;
+}
+
+.footer-location,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact {
+  gap: 10px;
+}
+
+.footer-contact .footer-label {
+  margin-bottom: 3px;
+}
+
+.footer-contact a {
+  color: var(--footer-muted);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* OVERSIZED NGABI WORDMARK */
+
+.footer-wordmark {
+  width: 100%;
+  margin-top: 15px;
+
+  color: var(--footer-white);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(5rem, 23.2vw, 25rem);
+  font-weight: 900;
+  line-height: 0.72;
+  letter-spacing: -0.105em;
+  text-align: center;
+  white-space: nowrap;
+
+  transform: translateX(-0.035em);
+  user-select: none;
+}
+
+/* TABLET */
+
+@media (max-width: 760px) {
+  .ngabi-footer {
+    padding: 38px 6% 0;
+  }
+
+  .footer-row {
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .footer-navigation-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-navigation-row .footer-label {
+    margin-bottom: 0;
+  }
+
+  .footer-nav {
+    justify-content: flex-start;
+    gap: 18px 24px;
+  }
+
+  .footer-wordmark {
+    font-size: 23vw;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .ngabi-footer {
+    padding: 32px 6% 0;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footer-about-row {
+    align-items: flex-start;
+  }
+
+  .footer-copyright {
+    font-size: 8px;
+  }
+
+  .footer-nav {
+    gap: 18px 22px;
+  }
+
+  .footer-contact-row {
+    gap: 28px;
+  }
+
+  .footer-wordmark {
+    margin-top: 22px;
+    font-size: 22.5vw;
+    letter-spacing: -0.09em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-nav a,
+  .footer-contact a {
+    transition: none;
+  }
+}

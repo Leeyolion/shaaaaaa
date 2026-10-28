@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Explore the Ngabi Events photography collection.">
+  <title>Photography | Ngabi Events</title>
+
+  <!-- Your typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet">
+
+  <!-- Keep your existing homepage files -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="photography.css">
+
+  <script src="script.js" defer></script>
+  <script src="photography.js" defer></script>
+</head>
+
+<body class="photography-page">
+
+  <!-- Header: matches the floating-logo / circular-menu layout -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ngabi Events home">
+      <img src="images/ngabilogo.jpeg" alt="Ngabi Events">
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
+      <span class="menu-line menu-line-top"></span>
+      <span class="menu-line menu-line-bottom"></span>
+    </button>
+  </header>
+
+  <!-- Navigation overlay -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation" inert>
+      <a class="nav-link" href="index.html" tabindex="-1">
+        <span class="nav-number">[01]</span>
+        <span class="nav-title">Home</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <a class="nav-link" href="photography.html" tabindex="-1" aria-current="page">
+        <span class="nav-number">[02]</span>
+        <span class="nav-title">Photography</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <a class="nav-link" href="videography.html" tabindex="-1">
+        <span class="nav-number">[03]</span>
+        <span class="nav-title">Videography</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <a class="nav-link" href="services.html" tabindex="-1">
+        <span class="nav-number">[04]</span>
+        <span class="nav-title">Services</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <a class="nav-link" href="contact.html" tabindex="-1">
+        <span class="nav-number">[05]</span>
+        <span class="nav-title">Contact</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <div class="nav-footer">
+        <span>KAMPALA, UGANDA</span>
+        <span>CAPTURING WHAT MATTERS.</span>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="photo-hero">
+      <img
+        class="photo-hero-image"
+        src="images/photography/hero-fashion.jpg"
+        alt="Editorial fashion photograph"
+      >
+
+      <div class="photo-hero-wash"></div>
+
+      <div class="photo-hero-topline">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="photo-hero-copy">
+        <p class="photo-eyebrow"></p>
+
+        <h1>
+          Life, in its
+          <br>
+          <span>finest frame.</span>
+        </h1>
+
+        <p class="photo-hero-description">
+          
+        </p>
+      </div>
+
+      <div class="photo-hero-bottom">
+        <span></span>
+        <a href="#photography-gallery">
+           <span>↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- GALLERY INTRO -->
+    <section class="photo-gallery-section" id="photography-gallery">
+      <div class="photo-gallery-heading">
+        <div>
+          <p class="photo-eyebrow">A VISUAL ARCHIVE</p>
+          <h2>Selected <span>frames.</span></h2>
+        </div>
+
+        <p>
+          Different people. Different places.
+          <br>
+          The same instinct to preserve what matters.
+        </p>
+      </div>
+
+      <!-- JavaScript creates all 80 gallery images here -->
+      <div class="photo-gallery" aria-label="Photography portfolio"></div>
+
+      <div class="photo-gallery-end">
+        <span>80 FRAMES</span>
+        <span>ONE CONTINUOUS STORY</span>
+        <span>NGABI EVENTS ©</span>
+      </div>
+    </section>
+
+    <!-- CLOSING SECTION -->
+    <section class="photo-contact">
+      <p class="photo-eyebrow">YOUR STORY, NEXT</p>
+
+      <h2>
+        Let’s make something
+        <br>
+        <span>worth keeping.</span>
+      </h2>
+
+      <a class="photo-contact-link" href="contact.html">
+        START A CONVERSATION <span>↗</span>
+      </a>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="ngabi-footer">
+
+  <!-- ROW 1: ABOUT + COPYRIGHT -->
+  <div class="footer-row footer-about-row">
+
+    <div class="footer-about">
+      <p class="footer-label">ABOUT NGABI</p>
+      <p>
+        Ngabi Events captures stories through photography and
+        videography, turning meaningful moments into lasting
+        visual memories.
+      </p>
+    </div>
+
+    <p class="footer-copyright">
+      © 2026 NGABI EVENTS. ALL RIGHTS RESERVED.
+    </p>
+
+  </div>
+
+  <!-- ROW 2: NAVIGATION -->
+  <div class="footer-row footer-navigation-row">
+
+    <p class="footer-label">EXPLORE</p>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="photography.html">Photography</a>
+      <a href="videography.html">Videography</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+
+  <!-- ROW 3: LOCATION + CONTACT -->
+  <div class="footer-row footer-contact-row">
+
+    <div class="footer-location">
+      <p class="footer-label">LOCATION</p>
+      <p>Kampala, Uganda</p>
+    </div>
+
+    <div class="footer-contact">
+      <p class="footer-label">GET IN TOUCH</p>
+      <a href="contact.html">Let's create something timeless.</a>
+      <a href="mailto:hello@ngabievents.com">
+        hello@ngabievents.com
+      </a>
+    </div>
+
+  </div>
+
+  <!-- OVERSIZED BRAND WORDMARK -->
+  <div class="footer-wordmark" aria-label="Ngabi">
+    NGABI
+  </div>
+
+</footer>
+
+
+  </main>
+
+  <!-- IMAGE LIGHTBOX -->
+  <div
+    class="photo-lightbox"
+    aria-hidden="true"
+    role="dialog"
+    aria-label="Expanded photograph"
+  >
+    <button class="photo-lightbox-close" type="button" aria-label="Close">
+      ×
+    </button>
+
+    <button class="photo-lightbox-prev" type="button" aria-label="Previous photo">
+      ←
+    </button>
+
+    <img src="" alt="">
+
+    <button class="photo-lightbox-next" type="button" aria-label="Next photo">
+      →
+    </button>
+
+    <p class="photo-lightbox-count"></p>
+  </div>
+
+</body>
+</html>

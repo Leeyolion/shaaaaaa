@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="Experience the stories, celebrations and unforgettable moments captured by Ngabi Events.">
+  <title>Films & Motion | Ngabi Events</title>
+
+  <!-- Keep your existing site styles intact -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="videography.css">
+</head>
+
+<body class="videography-page">
+
+    <!-- Header: matches the floating-logo / circular-menu layout -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ngabi Events home">
+      <img src="images/ngabilogo.jpeg" alt="Ngabi Events">
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="main-nav"
+    >
+      <span class="menu-line menu-line-top"></span>
+      <span class="menu-line menu-line-bottom"></span>
+    </button>
+  </header>
+
+  <!-- Navigation overlay -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation" inert>
+      <a class="nav-link" href="index.html" tabindex="-1">
+        <span class="nav-number">[01]</span>
+        <span class="nav-title">Home</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <a class="nav-link" href="photography.html" tabindex="-1" aria-current="page">
+        <span class="nav-number">[02]</span>
+        <span class="nav-title">Photography</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <a class="nav-link" href="videography.html" tabindex="-1">
+        <span class="nav-number">[03]</span>
+        <span class="nav-title">Videography</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <a class="nav-link" href="services.html" tabindex="-1">
+        <span class="nav-number">[04]</span>
+        <span class="nav-title">Services</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <a class="nav-link" href="contact.html" tabindex="-1">
+        <span class="nav-number">[05]</span>
+        <span class="nav-title">Contact</span>
+        <span class="nav-arrow">↗</span>
+      </a>
+
+      <div class="nav-footer">
+        <span>KAMPALA, UGANDA</span>
+        <span>CAPTURING WHAT MATTERS.</span>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+  <main class="film-main">
+    <section class="film-intro">
+      <div class="film-eyebrow">
+        <span class="eyebrow-line"></span>
+        NGABI EVENTS PRESENTS
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1>Stories in <span>motion.</span></h1>
+
+      <p>
+        The moments. The movement. The magic.
+        <span>Captured forever.</span>
+      </p>
+    </section>
+
+    <section class="reel-experience" aria-label="Ngabi Events film carousel">
+      <div class="reel-topline">
+        <div class="reel-section-label">
+          <span class="live-dot"></span>
+          2
+        </div>
+
+        <div class="reel-counter" aria-live="polite">
+          <span id="currentReelNumber">01</span>
+          <span class="counter-divider">/</span>
+          <span id="totalReelNumber">20</span>
+        </div>
+      </div>
+
+      <div class="reel-stage" id="reelStage">
+        <button class="stage-arrow stage-arrow-left"
+                id="previousReel"
+                type="button"
+                aria-label="Previous reel">
+          <span>←</span>
+        </button>
+
+        <article class="featured-reel" id="featuredReel">
+          <video
+            id="featuredVideo"
+            class="featured-video"
+            playsinline
+            preload="metadata"
+            poster="images/videography/reel-01.jpg"
+            aria-label="Featured Ngabi Events film">
+            Your browser does not support HTML video.
+          </video>
+
+          <div class="video-shade"></div>
+
+          <div class="video-top-meta">
+            <span class="video-index" id="videoIndex">FILM 01</span>
+            <span class="video-format">NGABI ORIGINALS <span>●</span></span>
+          </div>
+
+          <button class="main-play-button"
+                  id="playToggle"
+                  type="button"
+                  aria-label="Play featured film">
+            <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 5.5L19 12L8 18.5V5.5Z"
+                    fill="currentColor"/>
+            </svg>
+            <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 5H10V19H7ZM14 5H17V19H14Z"
+                    fill="currentColor"/>
+            </svg>
+          </button>
+
+          <div class="video-bottom-meta">
+            <div class="featured-copy">
+              <span class="featured-category" id="featuredCategory">WEDDINGS</span>
+              <h2 id="featuredTitle">A Story Worth Remembering</h2>
+              <p id="featuredDescription">
+                Every moment deserves to become a memory.
+              </p>
+            </div>
+
+            <button class="sound-toggle"
+                    id="soundToggle"
+                    type="button"
+                    aria-label="Turn sound on">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M11 5L6 9H3V15H6L11 19V5Z"
+                      fill="none" stroke="currentColor"
+                      stroke-width="1.5" stroke-linejoin="round"/>
+                <path class="sound-wave"
+                      d="M15 9C17 10.5 17 13.5 15 15"
+                      fill="none" stroke="currentColor"
+                      stroke-width="1.5" stroke-linecap="round"/>
+                <path class="sound-wave sound-wave-two"
+                      d="M18 6C22 9 22 15 18 18"
+                      fill="none" stroke="currentColor"
+                      stroke-width="1.5" stroke-linecap="round"/>
+                <path class="mute-cross"
+                      d="M15 9L21 15M21 9L15 15"
+                      fill="none" stroke="currentColor"
+                      stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="video-progress-track" aria-hidden="true">
+            <span id="videoProgress"></span>
+          </div>
+        </article>
+
+        <button class="stage-arrow stage-arrow-right"
+                id="nextReel"
+                type="button"
+                aria-label="Next reel">
+          <span>→</span>
+        </button>
+      </div>
+
+      <div class="reel-details">
+        <div class="reel-caption">
+          <span class="caption-label">NOW SHOWING</span>
+          <span id="reelCaption">An Ngabi Events film</span>
+        </div>
+
+        <div class="reel-navigation-hint">
+          <span>DRAG OR SCROLL TO EXPLORE</span>
+          <span class="hint-arrows">← →</span>
+        </div>
+      </div>
+
+      <div class="reel-rail-wrap">
+        <div class="reel-rail" id="reelRail"
+             aria-label="Choose a film">
+          <!-- The 20 reel thumbnails are created by videography.js -->
+        </div>
+      </div>
+
+      <div class="reel-bottomline">
+        <span>20 STORIES. INFINITE FEELING.</span>
+        <span>SHOT WITH INTENTION <span class="blue-star">✳</span></span>
+      </div>
+    </section>
+
+    <section class="film-cta">
+      <div class="cta-decoration" aria-hidden="true"></div>
+      <span class="cta-eyebrow"></span>
+      <h2>Let's make it <span>magical.</span></h2>
+      <a href="contact.html" class="film-cta-button">
+        CREATE WITH NGABI <span>↗</span>
+      </a>
+    </section>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="ngabi-footer">
+
+  <!-- ROW 1: ABOUT + COPYRIGHT -->
+  <div class="footer-row footer-about-row">
+
+    <div class="footer-about">
+      <p class="footer-label">ABOUT NGABI</p>
+      <p>
+        Ngabi Events captures stories through photography and
+        videography, turning meaningful moments into lasting
+        visual memories.
+      </p>
+    </div>
+
+    <p class="footer-copyright">
+      © 2026 NGABI EVENTS. ALL RIGHTS RESERVED.
+    </p>
+
+  </div>
+
+  <!-- ROW 2: NAVIGATION -->
+  <div class="footer-row footer-navigation-row">
+
+    <p class="footer-label">EXPLORE</p>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="photography.html">Photography</a>
+      <a href="videography.html">Videography</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+
+  <!-- ROW 3: LOCATION + CONTACT -->
+  <div class="footer-row footer-contact-row">
+
+    <div class="footer-location">
+      <p class="footer-label">LOCATION</p>
+      <p>Kampala, Uganda</p>
+    </div>
+
+    <div class="footer-contact">
+      <p class="footer-label">GET IN TOUCH</p>
+      <a href="contact.html">Let's create something timeless.</a>
+      <a href="mailto:hello@ngabievents.com">
+        hello@ngabievents.com
+      </a>
+    </div>
+
+  </div>
+
+  <!-- OVERSIZED BRAND WORDMARK -->
+  <div class="footer-wordmark" aria-label="Ngabi">
+    NGABI
+  </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script src="videography.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

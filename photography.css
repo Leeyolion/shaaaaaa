@@ -1,0 +1,805 @@
+
+/* =========================================
+   NGABI EVENTS — PHOTOGRAPHY PAGE
+   Independent stylesheet
+========================================= */
+
+.photography-page {
+  --photo-onyx: #101114;
+  --photo-paper: #f0eee9;
+  --photo-muted: rgba(240, 238, 233, 0.62);
+  --photo-blue: #63D8FF;
+
+  background: var(--photo-onyx);
+  color: var(--photo-paper);
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.photography-page .site-header {
+  position: absolute;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.photo-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: min(760px, 100vh);
+  overflow: hidden;
+  background: #29282e;
+}
+
+.photo-hero-image,
+.photo-hero-wash {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-hero-image {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center 38%;
+  filter: grayscale(1);
+}
+
+.photo-hero-wash {
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(16, 17, 20, 0.65),
+      rgba(16, 17, 20, 0.12) 75%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(16, 17, 20, 0.72),
+      transparent 38%,
+      rgba(16, 17, 20, 0.12)
+    );
+}
+
+.photo-hero-topline,
+.photo-hero-bottom {
+  position: absolute;
+  left: clamp(22px, 5vw, 76px);
+  right: clamp(22px, 5vw, 76px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.photo-hero-topline {
+  top: 125px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.photo-hero-copy {
+  width: min(780px, 78vw);
+  margin-left: clamp(22px, 12vw, 180px);
+  padding: 110px 0 80px;
+}
+
+.photo-eyebrow {
+  color: var(--photo-blue);
+  font-size: 9px;
+  line-height: 1.7;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.photo-hero-copy h1 {
+  margin: 22px 0 25px;
+  font-family: "Italiana", serif;
+  font-size: clamp(4rem, 10vw, 9.5rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+}
+
+.photo-hero-copy h1 span,
+.photo-gallery-heading h2 span,
+.photo-contact h2 span {
+  color: var(--photo-blue);
+}
+
+.photo-hero-description {
+  max-width: 390px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(0.8rem, 1.1vw, 0.94rem);
+  line-height: 1.9;
+}
+
+.photo-hero-bottom {
+  bottom: 28px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.photo-hero-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.photo-hero-bottom a span,
+.photo-contact-link span {
+  color: var(--photo-blue);
+  font-size: 16px;
+}
+
+/* =========================================
+   GALLERY INTRO
+========================================= */
+
+.photo-gallery-section {
+  padding-top: clamp(72px, 9vw, 132px);
+}
+
+.photo-gallery-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 clamp(22px, 5vw, 76px) 42px;
+}
+
+.photo-gallery-heading h2,
+.photo-contact h2 {
+  margin-top: 13px;
+  font-family: "Italiana", serif;
+  font-size: clamp(3rem, 6.5vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.photo-gallery-heading > p {
+  max-width: 270px;
+  padding-bottom: 5px;
+  color: var(--photo-muted);
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   MASONRY GALLERY
+   Four columns desktop
+   Three columns tablet
+   Two columns mobile
+   Zero gutters
+========================================= */
+
+.photography-page .photo-gallery {
+  display: block !important;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  column-count: 4 !important;
+  column-gap: 0 !important;
+  column-fill: balance;
+  background: var(--photo-onyx);
+  font-size: 0;
+}
+
+.photography-page .photo-tile {
+  position: relative;
+  display: inline-block !important;
+  vertical-align: top;
+  width: 100% !important;
+  max-width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  background: #25252a;
+  cursor: zoom-in;
+  text-align: left;
+  line-height: 0;
+  font-size: 12px;
+}
+
+.photography-page .photo-tile img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  object-fit: cover;
+  transition:
+    transform 0.65s cubic-bezier(0.2, 0.65, 0.2, 1),
+    filter 0.4s ease;
+}
+
+/* Varied portrait proportions */
+.photo-tile:nth-child(8n + 1) img,
+.photo-tile:nth-child(8n + 6) img {
+  aspect-ratio: 3 / 5;
+  object-fit: cover;
+}
+
+.photo-tile:nth-child(8n + 2) img,
+.photo-tile:nth-child(8n + 7) img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.photo-tile:nth-child(8n + 3) img {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.photo-tile:nth-child(8n + 4) img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.photo-tile:nth-child(8n + 5) img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.photo-tile:nth-child(8n) img {
+  aspect-ratio: 3 / 5;
+  object-fit: cover;
+}
+
+.photo-tile:hover img {
+  transform: scale(1.035);
+}
+
+/* Hover overlay */
+.photo-tile::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.58)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.photo-tile span {
+  position: absolute;
+  z-index: 1;
+  left: 14px;
+  bottom: 14px;
+  color: white;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-tile:hover::after,
+.photo-tile:hover span,
+.photo-tile:focus-visible span {
+  opacity: 1;
+}
+
+.photo-tile:focus-visible {
+  outline: 2px solid var(--photo-blue);
+  outline-offset: -3px;
+}
+
+/* =========================================
+   GALLERY END LINE
+========================================= */
+
+.photo-gallery-end {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px clamp(22px, 5vw, 76px);
+  border-bottom: 1px solid rgba(240, 238, 233, 0.17);
+  color: var(--photo-muted);
+  font-size: 8px;
+  letter-spacing: 0.16em;
+}
+
+/* =========================================
+   CLOSING CONTACT
+========================================= */
+
+.photo-contact {
+  padding: clamp(90px, 12vw, 170px) 22px;
+  text-align: center;
+}
+
+.photo-contact h2 {
+  margin: 24px auto 35px;
+  font-size: clamp(3.5rem, 8vw, 8rem);
+}
+
+.photo-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--photo-blue);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+}
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.photo-lightbox {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 70px;
+  background: rgba(8, 9, 11, 0.96);
+}
+
+.photo-lightbox.is-open {
+  display: flex;
+}
+
+.photo-lightbox img {
+  max-width: min(82vw, 1100px);
+  max-height: 82vh;
+  object-fit: contain;
+}
+
+.photo-lightbox button {
+  position: absolute;
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font: 300 30px "DM Sans", sans-serif;
+}
+
+.photo-lightbox-close {
+  top: 18px;
+  right: 28px;
+  font-size: 38px !important;
+}
+
+.photo-lightbox-prev {
+  top: 50%;
+  left: 22px;
+}
+
+.photo-lightbox-next {
+  top: 50%;
+  right: 22px;
+}
+
+.photo-lightbox-count {
+  position: absolute;
+  right: 0;
+  bottom: 22px;
+  left: 0;
+  color: var(--photo-muted);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-align: center;
+}
+
+body.photo-lightbox-open {
+  overflow: hidden;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .photo-hero {
+    min-height: 690px;
+  }
+
+  .photo-hero-copy {
+    width: 82vw;
+    margin-left: 7vw;
+  }
+
+  .photography-page .photo-gallery {
+    column-count: 3 !important;
+  }
+
+  .photo-gallery-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .photo-gallery-heading > p {
+    max-width: 420px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+  .photo-hero {
+    min-height: 640px;
+  }
+
+  .photo-hero-image {
+    object-position: 58% center;
+  }
+
+  .photo-hero-topline {
+    top: 105px;
+    font-size: 7px;
+  }
+
+  .photo-hero-copy {
+    width: calc(100% - 44px);
+    margin-left: 22px;
+    padding-top: 95px;
+  }
+
+  .photo-hero-copy h1 {
+    font-size: clamp(4rem, 17vw, 6rem);
+  }
+
+  .photo-hero-description {
+    max-width: 310px;
+  }
+
+  .photo-hero-bottom {
+    font-size: 7px;
+    letter-spacing: 0.1em;
+  }
+
+  .photography-page .photo-gallery {
+    column-count: 2 !important;
+  }
+
+  .photo-gallery-heading {
+    padding-bottom: 28px;
+  }
+
+  .photo-gallery-end {
+    font-size: 6px;
+    letter-spacing: 0.1em;
+  }
+
+  .photo-tile span {
+    left: 8px;
+    bottom: 8px;
+    font-size: 6px;
+  }
+
+  .photo-lightbox {
+    padding: 50px 15px;
+  }
+
+  .photo-lightbox img {
+    max-width: 90vw;
+    max-height: 78vh;
+  }
+
+  .photo-lightbox-prev {
+    left: 5px;
+  }
+
+  .photo-lightbox-next {
+    right: 5px;
+  }
+}
+
+/* Keep two columns even on small phones */
+@media (max-width: 380px) {
+  .photography-page .photo-gallery {
+    column-count: 2 !important;
+  }
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-tile img,
+  .photo-tile span,
+  .photo-tile::after {
+    transition: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   NGABI EVENTS — LUXURY FOOTER
+========================================= */
+
+.ngabi-footer {
+  --footer-onyx: #101114;
+  --footer-blue: #63d8ff;
+  --footer-white: #f0efe9;
+  --footer-muted: rgba(240, 239, 233, 0.56);
+
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  padding: 50px 5% 0;
+
+  color: var(--footer-white);
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(99, 216, 255, 0.07),
+      transparent 55%
+    ),
+    var(--footer-onyx);
+
+  font-family: "DM Sans", sans-serif;
+}
+
+/* THREE INFORMATION ROWS */
+
+.footer-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 35px;
+
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.footer-about-row {
+  padding-top: 0;
+  align-items: flex-end;
+}
+
+.footer-about {
+  max-width: 360px;
+}
+
+.footer-label {
+  margin: 0 0 15px;
+
+  color: var(--footer-blue);
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.footer-about > p:last-child,
+.footer-location > p:last-child {
+  margin: 0;
+
+  color: var(--footer-muted);
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.footer-copyright {
+  margin: 0;
+
+  color: var(--footer-muted);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+}
+
+/* NAVIGATION ROW */
+
+.footer-navigation-row {
+  align-items: center;
+}
+
+.footer-navigation-row .footer-label {
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px 30px;
+}
+
+.footer-nav a,
+.footer-contact a {
+  color: var(--footer-white);
+  text-decoration: none;
+
+  font-size: 11px;
+  transition: color 0.25s ease;
+}
+
+.footer-nav a:hover,
+.footer-contact a:hover {
+  color: var(--footer-blue);
+}
+
+/* LOCATION + CONTACT ROW */
+
+.footer-contact-row {
+  align-items: flex-start;
+  border-bottom: none;
+}
+
+.footer-location,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact {
+  gap: 10px;
+}
+
+.footer-contact .footer-label {
+  margin-bottom: 3px;
+}
+
+.footer-contact a {
+  color: var(--footer-muted);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* OVERSIZED NGABI WORDMARK */
+
+.footer-wordmark {
+  width: 100%;
+  margin-top: 15px;
+
+  color: var(--footer-white);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(5rem, 23.2vw, 25rem);
+  font-weight: 900;
+  line-height: 0.72;
+  letter-spacing: -0.105em;
+  text-align: center;
+  white-space: nowrap;
+
+  transform: translateX(-0.035em);
+  user-select: none;
+}
+
+/* TABLET */
+
+@media (max-width: 760px) {
+  .ngabi-footer {
+    padding: 38px 6% 0;
+  }
+
+  .footer-row {
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .footer-navigation-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-navigation-row .footer-label {
+    margin-bottom: 0;
+  }
+
+  .footer-nav {
+    justify-content: flex-start;
+    gap: 18px 24px;
+  }
+
+  .footer-wordmark {
+    font-size: 23vw;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .ngabi-footer {
+    padding: 32px 6% 0;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footer-about-row {
+    align-items: flex-start;
+  }
+
+  .footer-copyright {
+    font-size: 8px;
+  }
+
+  .footer-nav {
+    gap: 18px 22px;
+  }
+
+  .footer-contact-row {
+    gap: 28px;
+  }
+
+  .footer-wordmark {
+    margin-top: 22px;
+    font-size: 22.5vw;
+    letter-spacing: -0.09em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-nav a,
+  .footer-contact a {
+    transition: none;
+  }
+}
